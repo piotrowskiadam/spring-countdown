@@ -6,6 +6,10 @@ A customizable, modern desktop widget and top bar indicator for GNOME Shell (sup
 ![Session](https://img.shields.io/badge/Session-Wayland%20%7C%20X11-purple)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+<p align="center">
+  <img src="docs/images/screenshot.png" alt="Spring Countdown Widget & Preferences" width="460" />
+</p>
+
 ---
 
 ## ✨ Features
