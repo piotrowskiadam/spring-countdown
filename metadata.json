@@ -1,0 +1,9 @@
+{
+  "name": "Ile do Wiosny (Spring Countdown)",
+  "description": "Desktop widget i wskaźnik na górnym pasku odliczający czas (dni, tygodnie lub poniedziałki) do pierwszego dnia wiosny.",
+  "uuid": "spring-countdown@adampiotrowski.github.io",
+  "shell-version": ["45", "46", "47", "48", "49", "50"],
+  "settings-schema": "org.gnome.shell.extensions.spring-countdown",
+  "version": 1,
+  "url": "https://github.com/adampiotrowski"
+}

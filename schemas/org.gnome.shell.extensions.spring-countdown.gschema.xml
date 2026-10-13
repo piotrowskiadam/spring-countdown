@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="spring-countdown">
+  <schema id="org.gnome.shell.extensions.spring-countdown" path="/org/gnome/shell/extensions/spring-countdown/">
+    <key name="countdown-unit" type="s">
+      <default>'mondays'</default>
+      <summary>Jednostka odliczania</summary>
+      <description>Dostępne opcje: 'days', 'weeks', 'mondays'</description>
+    </key>
+    <key name="show-topbar-indicator" type="b">
+      <default>false</default>
+      <summary>Pokaż wskaźnik na górnym pasku</summary>
+      <description>Wyświetla krótki licznik w panelu górnym.</description>
+    </key>
+    <key name="show-desktop-widget" type="b">
+      <default>true</default>
+      <summary>Pokaż widżet na pulpicie</summary>
+      <description>Wyświetla estetyczny widżet bezpośrednio na pulpicie.</description>
+    </key>
+    <key name="monitor-target" type="s">
+      <default>'primary'</default>
+      <summary>Docelowy monitor dla widżetu</summary>
+      <description>'primary' (zawsze ekran główny wybrany w GNOME), '0', '1', '2' (konkretny monitor)</description>
+    </key>
+    <key name="relative-x" type="d">
+      <default>0.05</default>
+      <summary>Względna pozycja X na monitorze (0.0 - 1.0)</summary>
+      <description>Przesunięcie w poziomie względem szerokości monitora.</description>
+    </key>
+    <key name="relative-y" type="d">
+      <default>0.08</default>
+      <summary>Względna pozycja Y na monitorze (0.0 - 1.0)</summary>
+      <description>Przesunięcie w pionie względem wysokości monitora.</description>
+    </key>
+    <key name="position-x" type="d">
+      <default>100.0</default>
+      <summary>Pozycja X widżetu na pulpicie</summary>
+      <description>Współrzędna pozioma X widżetu na pulpicie.</description>
+    </key>
+    <key name="position-y" type="d">
+      <default>100.0</default>
+      <summary>Pozycja Y widżetu na pulpicie</summary>
+      <description>Współrzędna pionowa Y widżetu na pulpicie.</description>
+    </key>
+    <key name="lock-widget-position" type="b">
+      <default>false</default>
+      <summary>Zablokuj pozycję widżetu</summary>
+      <description>Blokuje możliwość przeciągania widżetu myszką po pulpicie.</description>
+    </key>
+    <key name="seasonal-behavior" type="s">
+      <default>'seasons'</default>
+      <summary>Zachowanie po nadejściu wiosny</summary>
+      <description>'seasons' (Trwa wiosna, Trwa lato, a od jesieni odliczanie) lub 'always-countdown' (zawsze odliczaj do najbliższej kolejnej wiosny)</description>
+    </key>
+    <key name="widget-theme" type="s">
+      <default>'glass'</default>
+      <summary>Styl graficzny widżetu</summary>
+      <description>'glass', 'solid-dark', 'minimal', 'emerald'</description>
+    </key>
+    <key name="widget-size" type="s">
+      <default>'large'</default>
+      <summary>Rozmiar widżetu</summary>
+      <description>'normal', 'large', 'huge'</description>
+    </key>
+    <key name="show-badge" type="b">
+      <default>true</default>
+      <summary>Pokaż etykietę nagłówkową</summary>
+      <description>Wyświetla małą plakietkę na górze widżetu.</description>
+    </key>
+    <key name="accent-color" type="s">
+      <default>'#4cd964'</default>
+      <summary>Kolor akcentu (HEX)</summary>
+      <description>Dowolny kolor akcentu w formacie HEX dla liczby i badge'a.</description>
+    </key>
+    <key name="subtitle-preset" type="s">
+      <default>'default'</default>
+      <summary>Styl i treść podpisu dolnego</summary>
+      <description>Dostępne presety: 'default', 'simple', 'grey-endure', 'depression', 'nature'</description>
+    </key>
+    <key name="language" type="s">
+      <default>'system'</default>
+      <summary>Język rozszerzenia</summary>
+      <description>'system', 'en', 'pl', 'de', 'es'</description>
+    </key>
+  </schema>
+</schemalist>

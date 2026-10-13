@@ -1,0 +1,131 @@
+/* Stylistyka widżetu na pulpicie i wskaźnika panelu */
+
+/* --- BAZA WIDŻETU --- */
+.spring-desktop-widget {
+    border-radius: 24px;
+    padding: 22px 28px;
+    transition-duration: 200ms;
+}
+
+/* MOTYW 1: GLASSMORPHISM */
+.spring-theme-glass {
+    background-color: rgba(18, 22, 30, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    color: #ffffff;
+}
+
+.spring-theme-glass:hover {
+    background-color: rgba(25, 30, 42, 0.88);
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* MOTYW 2: SOLID DARK */
+.spring-theme-solid-dark {
+    background-color: #12151c;
+    border: 1px solid #2a3140;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+}
+
+.spring-theme-solid-dark:hover {
+    border-color: #3f4a60;
+}
+
+/* MOTYW 3: EMERALD SPRING */
+.spring-theme-emerald {
+    background-color: rgba(12, 28, 20, 0.85);
+    border: 1px solid rgba(76, 217, 100, 0.4);
+    box-shadow: 0 16px 40px rgba(0, 20, 10, 0.5);
+    color: #e8f9ed;
+}
+
+.spring-theme-emerald:hover {
+    background-color: rgba(16, 38, 28, 0.92);
+    border-color: rgba(76, 217, 100, 0.6);
+}
+
+/* MOTYW 4: MINIMAL */
+.spring-theme-minimal {
+    background-color: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+    color: #ffffff;
+}
+
+.spring-desktop-widget-dragging {
+    border-color: #4cd964 !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7) !important;
+    opacity: 0.95;
+}
+
+/* --- ELEMENTY WEWNĘTRZNE --- */
+.spring-widget-badge {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #4cd964;
+    background-color: rgba(76, 217, 100, 0.20);
+    border-radius: 6px;
+    padding: 3px 10px;
+    margin-bottom: 6px;
+}
+
+.spring-widget-counter-box {
+    spacing: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+/* Wielka, wyrazista cyfra */
+.spring-widget-number {
+    font-weight: 900;
+    color: #4cd964;
+    text-shadow: 0 2px 10px rgba(76, 217, 100, 0.3);
+}
+
+/* Słowo jednostki (np. "tygodnie") */
+.spring-widget-unit {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* ROZMIARY */
+.spring-size-normal .spring-widget-number {
+    font-size: 38px;
+}
+.spring-size-normal .spring-widget-unit {
+    font-size: 24px;
+}
+
+.spring-size-large .spring-widget-number {
+    font-size: 54px;
+}
+.spring-size-large .spring-widget-unit {
+    font-size: 32px;
+}
+
+.spring-size-huge .spring-widget-number {
+    font-size: 72px;
+}
+.spring-size-huge .spring-widget-unit {
+    font-size: 42px;
+}
+
+.spring-widget-subtitle {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 2px;
+}
+
+/* Wskaźnik w panelu górnym (topbar) */
+.spring-topbar-button {
+    font-weight: 600;
+}
+
+.spring-topbar-label {
+    margin-left: 4px;
+    margin-right: 4px;
+}
