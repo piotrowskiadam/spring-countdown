@@ -114,10 +114,25 @@
 }
 
 .spring-widget-subtitle {
-    font-size: 13px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.75);
-    margin-top: 2px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 3px;
+}
+
+/* ROZMIARY PODPISU DOLNEGO */
+.spring-subsize-small .spring-widget-subtitle {
+    font-size: 11px;
+}
+.spring-subsize-medium .spring-widget-subtitle {
+    font-size: 14px;
+}
+.spring-subsize-large .spring-widget-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+.spring-subsize-huge .spring-widget-subtitle {
+    font-size: 24px;
+    font-weight: 700;
 }
 
 /* Wskaźnik w panelu górnym (topbar) */

@@ -96,6 +96,7 @@ The extension uses the GSettings schema `org.gnome.shell.extensions.spring-count
 | `accent-color` | string | `'#4cd964'` | Custom HEX color for numbers and highlights |
 | `widget-theme` | string | `'glass'` | `'glass'`, `'solid-dark'`, `'emerald'`, `'minimal'` |
 | `widget-size` | string | `'large'` | `'normal'`, `'large'`, `'huge'` |
+| `subtitle-size`| string | `'medium'` | `'small'`, `'medium'`, `'large'`, `'huge'` |
 | `show-badge` | boolean | `true` | Toggle the header pill badge |
 | `show-desktop-widget`| boolean | `true` | Enable/disable desktop wallpaper widget |
 | `show-topbar-indicator`| boolean | `false`| Enable/disable top panel indicator |

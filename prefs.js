@@ -70,6 +70,9 @@ const PREFS_I18N = {
         sizeRowTitle: 'Counter Size & Prominence',
         sizeRowSubtitle: 'Size and weight of the countdown numbers',
         sizeOptions: ['Standard (Normal)', 'Large & Clear (Large)', 'Huge Poster (Huge)'],
+        subSizeRowTitle: 'Subtitle Font Size',
+        subSizeRowSubtitle: 'Size of the message text below the numbers',
+        subSizeOptions: ['Small (11px)', 'Medium (14px)', 'Large (18px)', 'Huge (24px)'],
         badgeRowTitle: 'Show Header Badge',
         badgeRowSubtitle: 'Display top pill above the counter',
     },
@@ -139,6 +142,9 @@ const PREFS_I18N = {
         sizeRowTitle: 'Rozmiar i wyróżnienie licznika',
         sizeRowSubtitle: 'Wielkość głównego napisu odliczania',
         sizeOptions: ['Standardowy (Normal)', 'Duży i Wyraźny (Large)', 'Ogromny (Huge Poster)'],
+        subSizeRowTitle: 'Rozmiar czcionki podpisu dolnego',
+        subSizeRowSubtitle: 'Wielkość tekstu komunikatu pod licznikiem',
+        subSizeOptions: ['Mały (11px)', 'Średni (14px)', 'Duży (18px)', 'Bardzo duży (24px)'],
         badgeRowTitle: 'Pokaż nagłówek (Badge)',
         badgeRowSubtitle: 'Wyświetlaj plakietkę nad liczbą',
     },
@@ -208,6 +214,9 @@ const PREFS_I18N = {
         sizeRowTitle: 'Zählergröße',
         sizeRowSubtitle: 'Größe der Countdown-Zahl',
         sizeOptions: ['Standard (Normal)', 'Groß (Large)', 'Riesiges Poster (Huge)'],
+        subSizeRowTitle: 'Schriftgröße des Untertitels',
+        subSizeRowSubtitle: 'Größe des Textes unter der Zahl',
+        subSizeOptions: ['Klein (11px)', 'Mittel (14px)', 'Groß (18px)', 'Riesig (24px)'],
         badgeRowTitle: 'Kopfzeilen-Badge anzeigen',
         badgeRowSubtitle: 'Kleine Plakette über dem Zähler anzeigen',
     },
@@ -277,6 +286,9 @@ const PREFS_I18N = {
         sizeRowTitle: 'Tamaño del contador',
         sizeRowSubtitle: 'Tamaño y grosor de los números',
         sizeOptions: ['Estándar (Normal)', 'Grande (Large)', 'Póster gigante (Huge)'],
+        subSizeRowTitle: 'Tamaño del subtítulo',
+        subSizeRowSubtitle: 'Tamaño del texto debajo de los números',
+        subSizeOptions: ['Pequeño (11px)', 'Mediano (14px)', 'Grande (18px)', 'Gigante (24px)'],
         badgeRowTitle: 'Mostrar distintivo superior',
         badgeRowSubtitle: 'Mostrar placa sobre el número',
     },
@@ -536,6 +548,23 @@ export default class SpringCountdownPreferences extends ExtensionPreferences {
         });
         styleGroup.add(sizeRow);
 
+        // Rozmiar podpisu dolnego
+        const subSizeRow = new Adw.ComboRow({
+            title: t.subSizeRowTitle,
+            subtitle: t.subSizeRowSubtitle,
+            model: new Gtk.StringList({ strings: t.subSizeOptions }),
+        });
+
+        const subSizeMap = ['small', 'medium', 'large', 'huge'];
+        const currentSubSize = settings.get_string('subtitle-size');
+        const subSizeIndex = subSizeMap.indexOf(currentSubSize);
+        subSizeRow.selected = subSizeIndex >= 0 ? subSizeIndex : 1;
+
+        subSizeRow.connect('notify::selected', () => {
+            settings.set_string('subtitle-size', subSizeMap[subSizeRow.selected] || 'medium');
+        });
+        styleGroup.add(subSizeRow);
+
         // Badge
         const badgeRow = new Adw.SwitchRow({
             title: t.badgeRowTitle,
@@ -596,6 +625,9 @@ export default class SpringCountdownPreferences extends ExtensionPreferences {
             sizeRow.title = newT.sizeRowTitle;
             sizeRow.subtitle = newT.sizeRowSubtitle;
             sizeRow.model = new Gtk.StringList({ strings: newT.sizeOptions });
+            subSizeRow.title = newT.subSizeRowTitle;
+            subSizeRow.subtitle = newT.subSizeRowSubtitle;
+            subSizeRow.model = new Gtk.StringList({ strings: newT.subSizeOptions });
             badgeRow.title = newT.badgeRowTitle;
             badgeRow.subtitle = newT.badgeRowSubtitle;
         };

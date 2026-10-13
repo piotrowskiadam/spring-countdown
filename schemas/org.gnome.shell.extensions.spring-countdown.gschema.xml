@@ -76,6 +76,11 @@
       <summary>Styl i treść podpisu dolnego</summary>
       <description>Dostępne presety: 'default', 'simple', 'grey-endure', 'depression', 'nature'</description>
     </key>
+    <key name="subtitle-size" type="s">
+      <default>'medium'</default>
+      <summary>Rozmiar czcionki podpisu dolnego</summary>
+      <description>'small', 'medium', 'large', 'huge'</description>
+    </key>
     <key name="language" type="s">
       <default>'system'</default>
       <summary>Język rozszerzenia</summary>

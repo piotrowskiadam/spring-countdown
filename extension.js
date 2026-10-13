@@ -73,6 +73,7 @@ class SpringDesktopWidget extends St.Widget {
     applyStyleAndTheme() {
         const theme = this._settings.get_string('widget-theme') || 'glass';
         const size = this._settings.get_string('widget-size') || 'large';
+        const subSize = this._settings.get_string('subtitle-size') || 'medium';
         const showBadge = this._settings.get_boolean('show-badge');
         const accentHex = this._settings.get_string('accent-color') || '#4cd964';
 
@@ -84,12 +85,15 @@ class SpringDesktopWidget extends St.Widget {
 
         const themeClasses = ['spring-theme-glass', 'spring-theme-solid-dark', 'spring-theme-emerald', 'spring-theme-minimal'];
         const sizeClasses = ['spring-size-normal', 'spring-size-large', 'spring-size-huge'];
+        const subSizeClasses = ['spring-subsize-small', 'spring-subsize-medium', 'spring-subsize-large', 'spring-subsize-huge'];
 
         themeClasses.forEach(cls => this.remove_style_class_name(cls));
         sizeClasses.forEach(cls => this.remove_style_class_name(cls));
+        subSizeClasses.forEach(cls => this.remove_style_class_name(cls));
 
         this.add_style_class_name(`spring-theme-${theme}`);
         this.add_style_class_name(`spring-size-${size}`);
+        this.add_style_class_name(`spring-subsize-${subSize}`);
     }
 
     _hexToRgba(hex, alpha = 1) {
@@ -227,6 +231,7 @@ export default class SpringCountdownExtension extends Extension {
             this._settings.connect('changed::accent-color', () => this._syncThemeAndStyle()),
             this._settings.connect('changed::widget-theme', () => this._syncThemeAndStyle()),
             this._settings.connect('changed::widget-size', () => this._syncThemeAndStyle()),
+            this._settings.connect('changed::subtitle-size', () => this._syncThemeAndStyle()),
             this._settings.connect('changed::show-badge', () => this._syncThemeAndStyle()),
             this._settings.connect('changed::monitor-target', () => this._relayoutWidget()),
             this._settings.connect('changed::relative-x', () => this._relayoutWidget()),
