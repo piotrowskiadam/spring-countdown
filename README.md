@@ -4,7 +4,7 @@ A customizable, modern desktop widget and top bar indicator for GNOME Shell (sup
 
 ![GNOME Shell](https://img.shields.io/badge/GNOME-45%20--%2050-blue)
 ![Session](https://img.shields.io/badge/Session-Wayland%20%7C%20X11-purple)
-![License](https://img.shields.io/badge/License-GPLv3-green)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
@@ -112,6 +112,7 @@ The extension uses the GSettings schema `org.gnome.shell.extensions.spring-count
 ├── metadata.json     # GNOME extension metadata and version compatibility
 ├── install.sh        # Schema compiler and installer script
 ├── schemas/          # GSettings XML schema and compiled binary
+├── LICENSE           # MIT License
 ├── AGENTS.md         # Architecture and guide for AI coding assistants
 └── README.md         # Project overview and user documentation
 ```
@@ -120,4 +121,4 @@ The extension uses the GSettings schema `org.gnome.shell.extensions.spring-count
 
 ## 📄 License
 
-Distributed under the [GPL-3.0 License](LICENSE).
+Distributed under the [MIT License](LICENSE).
