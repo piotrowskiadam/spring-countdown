@@ -15,31 +15,32 @@ export const I18N = {
         daysPlural: (n) => formatPolishPlural(n, 'dzień', 'dni', 'dni'),
         weeksPlural: (n) => formatPolishPlural(n, 'tydzień', 'tygodnie', 'tygodni'),
         mondaysPlural: (n) => formatPolishPlural(n, 'poniedziałek', 'poniedziałki', 'poniedziałków'),
+        // Podpisy czytane naturalnie z górną linią (np. "22 poniedziałki" -> "do wiosny")
         subtitles: {
             'default': {
-                days: 'Dni do 21 marca',
-                weeks: 'Tyle tygodni dzieli nas od wiosny',
-                mondays: 'Jeszcze tylko tyle poniedziałków do wiosny!',
+                days: 'do 21 marca',
+                weeks: 'dzieli nas od wiosny',
+                mondays: 'dzieli nas od wiosny',
             },
             'simple': {
-                days: 'do 21 marca',
+                days: 'do wiosny',
                 weeks: 'do wiosny',
-                mondays: 'poniedziałków do wiosny',
+                mondays: 'do wiosny',
             },
             'grey-endure': {
-                days: 'dni do wytrzymania w tej szarości',
-                weeks: 'tygodni do przetrwania w szarości',
-                mondays: 'poniedziałków do przetrwania w szarości',
+                days: 'do wytrzymania w tej szarości',
+                weeks: 'do przetrwania w tej szarości',
+                mondays: 'do przetrwania w tej szarości',
             },
             'depression': {
-                days: 'dni w jesienno-zimowej melancholii',
-                weeks: 'tygodni w jesienno-zimowej depresji',
-                mondays: 'poniedziałków w jesienno-zimowej depresji',
+                days: 'w jesienno-zimowej melancholii',
+                weeks: 'w jesienno-zimowej depresji',
+                mondays: 'w jesienno-zimowej depresji',
             },
             'nature': {
-                days: 'dni do pierwszych przebiśniegów i pąków',
-                weeks: 'tygodni do powrotu ptaków i zieleni',
-                mondays: 'poniedziałków do ciepłych poranków',
+                days: 'do pierwszych przebiśniegów i pąków',
+                weeks: 'do powrotu zieleni i ptaków',
+                mondays: 'do ciepłych, słonecznych poranków',
             },
         },
     },
@@ -57,29 +58,29 @@ export const I18N = {
         mondaysPlural: (n) => n === 1 ? 'Monday' : 'Mondays',
         subtitles: {
             'default': {
-                days: 'Days left until March 21st',
-                weeks: 'Weeks separating us from spring',
-                mondays: 'Just that many Mondays until spring!',
+                days: 'until March 21st',
+                weeks: 'separating us from spring',
+                mondays: 'separating us from spring',
             },
             'simple': {
                 days: 'until spring',
                 weeks: 'until spring',
-                mondays: 'Mondays until spring',
+                mondays: 'until spring',
             },
             'grey-endure': {
-                days: 'days to endure the gloomy weather',
-                weeks: 'weeks to survive the gloom',
-                mondays: 'Mondays to survive in the gloom',
+                days: 'to endure the gloomy weather',
+                weeks: 'to survive in the gloom',
+                mondays: 'to survive in the gloom',
             },
             'depression': {
-                days: 'days of autumn-winter blues left',
-                weeks: 'weeks of seasonal depression left',
-                mondays: 'cold Mondays of seasonal blues',
+                days: 'of autumn-winter blues left',
+                weeks: 'of seasonal depression left',
+                mondays: 'of seasonal blues left',
             },
             'nature': {
-                days: 'days until the first flowers bloom',
-                weeks: 'weeks until green leaves return',
-                mondays: 'Mondays until sunny mornings',
+                days: 'until the first flowers bloom',
+                weeks: 'until green leaves return',
+                mondays: 'until warm sunny mornings',
             },
         },
     },
@@ -97,29 +98,29 @@ export const I18N = {
         mondaysPlural: (n) => n === 1 ? 'Montag' : 'Montage',
         subtitles: {
             'default': {
-                days: 'Tage bis zum 21. März',
-                weeks: 'Wochen trennen uns vom Frühling',
-                mondays: 'Nur noch so viele Montage bis zum Frühling!',
+                days: 'bis zum 21. März',
+                weeks: 'trennen uns vom Frühling',
+                mondays: 'trennen uns vom Frühling',
             },
             'simple': {
                 days: 'bis zum Frühling',
                 weeks: 'bis zum Frühling',
-                mondays: 'Montage bis zum Frühling',
+                mondays: 'bis zum Frühling',
             },
             'grey-endure': {
-                days: 'Tage im grauen Wetter durchhalten',
-                weeks: 'Wochen im trüben Grau überstehen',
-                mondays: 'Montage im trüben Grau überstehen',
+                days: 'im grauen Wetter durchhalten',
+                weeks: 'im trüben Grau überstehen',
+                mondays: 'im trüben Grau überstehen',
             },
             'depression': {
-                days: 'Tage Herbst-Winter-Melancholie',
-                weeks: 'Wochen im Winterblues',
-                mondays: 'Montage im Winterblues',
+                days: 'Herbst-Winter-Melancholie verbleibend',
+                weeks: 'im Winterblues verbleibend',
+                mondays: 'im Winterblues verbleibend',
             },
             'nature': {
-                days: 'Tage bis zur ersten Blütenpracht',
-                weeks: 'Wochen bis alles wieder grün wird',
-                mondays: 'Montage bis zu warmen Tagen',
+                days: 'bis zur ersten Blütenpracht',
+                weeks: 'bis alles wieder grün wird',
+                mondays: 'bis zu sonnigen Morgenstunden',
             },
         },
     },
@@ -137,34 +138,40 @@ export const I18N = {
         mondaysPlural: (n) => n === 1 ? 'lunes' : 'lunes',
         subtitles: {
             'default': {
-                days: 'Días hasta el 21 de marzo',
-                weeks: 'Semanas que nos separan de la primavera',
-                mondays: '¡Solo estos lunes hasta la primavera!',
+                days: 'hasta el 21 de marzo',
+                weeks: 'nos separan de la primavera',
+                mondays: 'nos separan de la primavera',
             },
             'simple': {
                 days: 'para la primavera',
                 weeks: 'para la primavera',
-                mondays: 'lunes para la primavera',
+                mondays: 'para la primavera',
             },
             'grey-endure': {
-                days: 'días para aguantar la grisura',
-                weeks: 'semanas para superar el frío gris',
-                mondays: 'lunes para sobrevivir al frío gris',
+                days: 'para aguantar la grisura',
+                weeks: 'para superar el frío gris',
+                mondays: 'para superar el frío gris',
             },
             'depression': {
-                days: 'días de bajón otoñal e invernal',
-                weeks: 'semanas de melancolía invernal',
-                mondays: 'lunes de melancolía invernal',
+                days: 'de melancolía otoñal e invernal',
+                weeks: 'de melancolía invernal',
+                mondays: 'de bajón invernal',
             },
             'nature': {
-                days: 'días para ver las primeras flores',
-                weeks: 'semanas para que vuelva el verde',
-                mondays: 'lunes para mañanas soleadas',
+                days: 'para ver las primeras flores',
+                weeks: 'para que vuelva el verde',
+                mondays: 'para mañanas soleadas',
             },
         },
     },
 };
 
+/**
+ * Precyzyjna polska fleksja liczebników:
+ * - 1: "poniedziałek", "tydzień", "dzień"
+ * - 2-4 (oraz końcówki 22, 23, 24, 32... poza nastkami): "poniedziałki", "tygodnie", "dni"
+ * - 5-21, 25-31 itd.: "poniedziałków", "tygodni", "dni"
+ */
 function formatPolishPlural(n, one, few, many) {
     if (n === 1) return one;
     const mod10 = n % 10;
@@ -261,7 +268,6 @@ export class SpringCountdownCalculator {
         if (code && code !== 'system' && I18N[code]) {
             return code;
         }
-        // Pobierz język ze zmiennych środowiskowych / Intl
         if (typeof Intl !== 'undefined' && Intl.DateTimeFormat) {
             const loc = new Intl.DateTimeFormat().resolvedOptions().locale.toLowerCase();
             if (loc.startsWith('pl')) return 'pl';
